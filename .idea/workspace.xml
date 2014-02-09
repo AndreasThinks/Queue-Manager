@@ -23,21 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Queue_manager.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Queue_manager.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Queue_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="18" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.31875" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Queue_manager_tests.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Queue_manager_tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.14166667" vertical-offset="0" max-vertical-offset="960">
+            <state line="14" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
+                <marker date="1391944234030" expanded="true" signature="111:568" placeholder="..." />
+                <marker date="1391944234030" expanded="true" signature="274:367" placeholder="..." />
+                <marker date="1391944234030" expanded="true" signature="401:568" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +58,8 @@
       <list>
         <option value="$PROJECT_DIR$/Queue Manager.py" />
         <option value="$PROJECT_DIR$/Manager_tests.py" />
-        <option value="$PROJECT_DIR$/Queue_manager.py" />
         <option value="$PROJECT_DIR$/Queue_manager_tests.py" />
+        <option value="$PROJECT_DIR$/Queue_manager.py" />
       </list>
     </option>
   </component>
@@ -291,19 +294,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Queue_manager.py">
+    <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
+        <state line="14" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+            <marker date="1391944234030" expanded="true" signature="111:568" placeholder="..." />
+            <marker date="1391944234030" expanded="true" signature="274:367" placeholder="..." />
+            <marker date="1391944234030" expanded="true" signature="401:568" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
+    <entry file="file://$PROJECT_DIR$/Queue_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.14166667" vertical-offset="0" max-vertical-offset="960">
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
+        <state line="18" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.31875" vertical-offset="0" max-vertical-offset="960">
+          <folding />
         </state>
       </provider>
     </entry>

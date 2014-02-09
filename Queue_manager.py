@@ -10,6 +10,9 @@ class Task:
         pass
 
 class Queue:
-    def __init__(self,tasks):
+    def __init__(self):
         self.tasks = []
         self.startTime = time.time()
+
+    def add_to_queue(self,task):
+        self.tasks.append(task)
