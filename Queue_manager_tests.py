@@ -1,5 +1,5 @@
 __author__ = 'Andreas'
-import unittest
+import unittest, time
 from Queue_manager import *
 
 class QueueManagerTests(unittest.TestCase):
@@ -16,3 +16,41 @@ class QueueManagerTests(unittest.TestCase):
         passport = Task(20,"passport","Bob")
         new_queue.add_to_queue(passport)
         self.assertTrue(passport in new_queue.tasks)
+
+    def test_check_time_pass(self):
+        new_queue = Queue()
+        time.sleep(0.5)
+        self.assertTrue(new_queue.startTime < time.time())
+
+    def test_estimate_queue_time(self):
+        new_queue = Queue()
+        passport1 = Task(30,"passport","Bob")
+        passport2 = Task(20,"passport","Bob")
+        passport3 = Task(20,"passport","Bob")
+        new_queue.add_to_queue(passport1)
+        new_queue.add_to_queue(passport2)
+        new_queue.add_to_queue(passport3)
+        self.assertEqual(new_queue.estimate_time(), 70)
+
+    def test_list_tasks(self):
+        new_queue = Queue()
+        passport1 = Task(30,"passport","Bob")
+        passport2 = Task(20,"passport","Bob")
+        passport3 = Task(20,"passport","Bob")
+        new_queue.add_to_queue(passport1)
+        new_queue.add_to_queue(passport2)
+        new_queue.add_to_queue(passport3)
+        new_queue.list_tasks()
+
+    def test_activate_task(self):
+        new_queue = Queue()
+        passport1 = Task(30,"passport","Bob")
+        passport2 = Task(20,"passport","Bob")
+        passport3 = Task(20,"passport","Bob")
+        new_queue.add_to_queue(passport1)
+        new_queue.add_to_queue(passport2)
+        new_queue.add_to_queue(passport3)
+        new_queue.activate_task(passport1)
+        self.assertEqual(new_queue.current_task, passport1)
+
+

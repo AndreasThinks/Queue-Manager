@@ -26,7 +26,7 @@
       <file leaf-file-name="Queue_manager.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Queue_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.31875" vertical-offset="0" max-vertical-offset="960">
+            <state line="37" column="33" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.6524896" vertical-offset="0" max-vertical-offset="964">
               <folding />
             </state>
           </provider>
@@ -35,13 +35,8 @@
       <file leaf-file-name="Queue_manager_tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <folding>
-                <element signature="e#23#38#0" expanded="true" />
-                <marker date="1391944234030" expanded="true" signature="111:568" placeholder="..." />
-                <marker date="1391944234030" expanded="true" signature="274:367" placeholder="..." />
-                <marker date="1391944234030" expanded="true" signature="401:568" placeholder="..." />
-              </folding>
+            <state line="49" column="41" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="1037">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +62,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1092" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -95,7 +90,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -116,10 +110,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Unit 1/discount_calculator" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="py.test">
@@ -255,7 +251,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1092" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -289,6 +285,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Queue_manager.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="625" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="45" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="45" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="33" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="255">
           <folding />
         </state>
@@ -296,19 +320,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Queue_manager_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-            <marker date="1391944234030" expanded="true" signature="111:568" placeholder="..." />
-            <marker date="1391944234030" expanded="true" signature="274:367" placeholder="..." />
-            <marker date="1391944234030" expanded="true" signature="401:568" placeholder="..." />
-          </folding>
+        <state line="49" column="41" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="1037">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Queue_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.31875" vertical-offset="0" max-vertical-offset="960">
+        <state line="37" column="33" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.6524896" vertical-offset="0" max-vertical-offset="964">
           <folding />
         </state>
       </provider>
