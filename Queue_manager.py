@@ -19,6 +19,7 @@ class Queue:
         self.tasks_done = 0
         self.task_start = 0
         self.startTime = time.time()
+        self.current_task = None
 
     def add_to_queue(self,task):
         self.tasks.append(task)
@@ -49,7 +50,7 @@ class Queue:
         self.average_task_time = (task_time + self.average_task_time) / self.tasks_done
         task_time_to_estimate = self.current_task.time_estimate - task_time
         self.time_to_estimate = (task_time_to_estimate + self.time_to_estimate) / self.tasks_done
-        print "Task completed in {t} seconds - {e} compared to time estimate. Current average task time compared to estimate:{tt}".format(task_time,task_time_to_estimate,self.time_to_estimate)
+        print "Task completed in {0} seconds - {1} compared to time estimate. Current average task time compared to estimate:{2}".format(task_time,task_time_to_estimate,self.time_to_estimate)
         self.current_task = None
         self.list_tasks()
 
@@ -66,7 +67,7 @@ def main():
     loop(queue_name)
 
 def loop(queue):
-    choice = raw_input('''Please choose one of the following options: [L]ist tasks in queue, [C]reate a Task, [B]egin a task, [F]inish current task, [C]urrent Statistics, [Q]uit ''')
+    choice = raw_input('''Please choose one of the following options: [L]ist tasks in queue, [C]reate a Task, [B]egin a task, [F]inish current task, Current [S]tatistics, [Q]uit ''')
     if choice == "C":
         queue.task_dict[queue.number_of_tasks] = create_a_task()
         queue.add_to_queue(queue.task_dict[queue.number_of_tasks])
@@ -78,12 +79,12 @@ def loop(queue):
         loop(queue)
     elif choice == "B":
         task_number = raw_input("Please chose a task number to begin")
-        queue.activate_task(int(queue.task_dict[task_number]))
+        queue.activate_task(queue.task_dict[int(task_number)])
         loop(queue)
     elif choice == "F":
         queue.finish_task()
         loop(queue)
-    elif choice == "C":
+    elif choice == "S":
         print "Seconds since queue start : " + str(time.time() - queue.startTime)
         print "Average Task Time : " + str(queue.average_task_time)
         print "Average Task Time to Estimate : " + str(queue.time_to_estimate)
