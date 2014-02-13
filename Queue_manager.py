@@ -37,7 +37,7 @@ class Queue:
         print "Tasks in Queue:"
         i = 0
         for item in self.tasks:
-            print "Task " + str(i) + " : " + "{0} for {1}, estimated time: {2} minutes".format(item.type,item.customer,item.time_estimate)
+            print "Task " + str(i) + " : " + "{0} for {1}, estimated time: {2} seconds".format(item.type,item.customer,item.time_estimate)
             i += 1
 
     def activate_task(self,task):
@@ -55,13 +55,17 @@ class Queue:
         self.list_tasks()
 
 def create_a_task():
-    customer_name = raw_input("Please enter customer name")
-    task_type = raw_input("Please enter a task type")
-    time_estimate = float(raw_input("Please enter a time estimate"))
+    customer_name = raw_input("Please enter customer name  ")
+    task_type = raw_input("Please enter a task type  ")
+    try:
+        time_estimate = float(raw_input("Please enter a time estimate  "))
+        time_estimate / 3 == float
+    except TypeError:
+        raw_input("Please chose a float or integer as a time estimate ")
     return Task(time_estimate,task_type,customer_name)
 
 def main():
-    queue_name = raw_input("Welcome to Queue Manager.  Please input a name for your first queue.")
+    queue_name = raw_input("Welcome to Queue Manager.  Please input a name for your first queue.  ")
     queue_name = Queue()
     print "Queue initiated."
     loop(queue_name)
@@ -78,7 +82,7 @@ def loop(queue):
         queue.list_tasks()
         loop(queue)
     elif choice == "B":
-        task_number = raw_input("Please chose a task number to begin")
+        task_number = raw_input("Please chose a task number to begin  ")
         queue.activate_task(queue.task_dict[int(task_number)])
         loop(queue)
     elif choice == "F":
@@ -88,12 +92,12 @@ def loop(queue):
         print "Seconds since queue start : " + str(time.time() - queue.startTime)
         print "Average Task Time : " + str(queue.average_task_time)
         print "Average Task Time to Estimate : " + str(queue.time_to_estimate)
+        print "Tasks Completed: " + str(queue.tasks_done)
         loop(queue)
     elif choice == "Q":
         exit()
     else:
-        print "Please chose a valid option"
+        print "Please chose a valid option  "
         loop(queue)
-
 
 main()
