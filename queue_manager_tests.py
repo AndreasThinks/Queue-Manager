@@ -11,7 +11,7 @@ class QueueManagerTests(unittest.TestCase):
         # TODO -->
         # For example
         # self.assertEquals(passport.time, 20)
-        # self.assertEquals(task_type, "passport")
+        # self.assertEquals(passport.task_type, "passport")
 
     def test_create_queue(self):
         new_queue = Queue()
@@ -30,9 +30,9 @@ class QueueManagerTests(unittest.TestCase):
 
     def test_estimate_queue_time(self):
         new_queue = Queue()
-        passport1 = Task(30,"passport","Bob")
-        passport2 = Task(20,"passport","Bob")
-        passport3 = Task(20,"passport","Bob")
+        passport1 = Task(30, "passport", "Bob")
+        passport2 = Task(20, "passport", "Bob")
+        passport3 = Task(20, "passport", "Bob")
         new_queue.add_to_queue(passport1)
         new_queue.add_to_queue(passport2)
         new_queue.add_to_queue(passport3)
@@ -40,9 +40,9 @@ class QueueManagerTests(unittest.TestCase):
 
     def test_list_tasks(self):
         new_queue = Queue()
-        passport1 = Task(30,"passport","Bob")
-        passport2 = Task(20,"passport","Bob")
-        passport3 = Task(20,"passport","Bob")
+        passport1 = Task(30, "passport", "Bob")
+        passport2 = Task(20, "passport", "Bob")
+        passport3 = Task(20, "passport", "Bob")
         new_queue.add_to_queue(passport1)
         new_queue.add_to_queue(passport2)
         new_queue.add_to_queue(passport3)
@@ -50,13 +50,11 @@ class QueueManagerTests(unittest.TestCase):
 
     def test_activate_task(self):
         new_queue = Queue()
-        passport1 = Task(30,"passport","Bob")
-        passport2 = Task(20,"passport","Bob")
-        passport3 = Task(20,"passport","Bob")
+        passport1 = Task(30, "passport", "Bob")
+        passport2 = Task(20, "passport", "Bob")
+        passport3 = Task(20, "passport", "Bob")
         new_queue.add_to_queue(passport1)
         new_queue.add_to_queue(passport2)
         new_queue.add_to_queue(passport3)
         new_queue.activate_task(passport1)
         self.assertEqual(new_queue.current_task, passport1)
-
-
