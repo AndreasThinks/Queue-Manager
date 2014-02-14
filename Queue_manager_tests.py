@@ -1,7 +1,7 @@
 __author__ = 'Andreas'
 import unittest
 import time
-from Queue_manager import Task, Queue
+from queue_manager import Task, Queue
 
 
 class QueueManagerTests(unittest.TestCase):
