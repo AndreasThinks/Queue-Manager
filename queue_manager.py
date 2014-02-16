@@ -1,13 +1,17 @@
+#! /usr/bin/env python
 __author__ = 'Andreas'
 import time
+
+
 class Task:
-    def __init__(self,time_estimate,type,customer):
+    def __init__(self, time_estimate, task_type, customer):
         self.time_estimate = time_estimate
-        self.type = type
+        self.task_type = task_type  # type is a reserved keyword in python
         self.customer = customer
 
-    def add_to_queue(self,queue):
+    def add_to_queue(self, queue):
         queue.add_to_queue(self)
+
 
 class Queue:
     def __init__(self):
@@ -21,7 +25,7 @@ class Queue:
         self.startTime = time.time()
         self.current_task = None
 
-    def add_to_queue(self,task):
+    def add_to_queue(self, task):
         self.tasks.append(task)
 
     def estimate_time(self):
@@ -37,12 +41,12 @@ class Queue:
         print "Tasks in Queue:"
         i = 0
         for item in self.tasks:
-            print "Task " + str(i) + " : " + "{0} for {1}, estimated time: {2} seconds".format(item.type,item.customer,item.time_estimate)
+            print "Task " + str(i) + " : " + "{0} for {1}, estimated time: {2} seconds".format(item.task_type, item.customer, item.time_estimate)
             i += 1
 
-    def activate_task(self,task):
+    def activate_task(self, task):
         self.task_start = time.time()
-        self.current_task = self.tasks.pop(self.tasks.index(task))
+        self.current_task = self.tasks.pop(self.tasks.index(task))  # what happens if there is more than one `task` that is the same?
 
     def finish_task(self):
         task_time = time.time() - self.task_start
@@ -50,25 +54,28 @@ class Queue:
         self.average_task_time = (task_time + self.average_task_time) / self.tasks_done
         task_time_to_estimate = self.current_task.time_estimate - task_time
         self.time_to_estimate = (task_time_to_estimate + self.time_to_estimate) / self.tasks_done
-        print "Task completed in {0} seconds - {1} compared to time estimate. Current average task time compared to estimate:{2}".format(task_time,task_time_to_estimate,self.time_to_estimate)
+        print "Task completed in {0} seconds - {1} compared to time estimate. Current average task time compared to estimate:{2}".format(task_time, task_time_to_estimate, self.time_to_estimate)
         self.current_task = None
         self.list_tasks()
+
 
 def create_a_task():
     customer_name = raw_input("Please enter customer name  ")
     task_type = raw_input("Please enter a task type  ")
     try:
         time_estimate = float(raw_input("Please enter a time estimate  "))
-        time_estimate / 3 == float
+        time_estimate / 3 == float  # what does this line do?
     except TypeError:
         raw_input("Please chose a float or integer as a time estimate ")
-    return Task(time_estimate,task_type,customer_name)
+    return Task(time_estimate, task_type, customer_name)
+
 
 def main():
     queue_name = raw_input("Welcome to Queue Manager.  Please input a name for your first queue.  ")
     queue_name = Queue()
     print "Queue initiated."
     loop(queue_name)
+
 
 def loop(queue):
     choice = raw_input('''Please choose one of the following options: [L]ist tasks in queue, [C]reate a Task, [B]egin a task, [F]inish current task, Current [S]tatistics, [Q]uit ''')
@@ -100,4 +107,5 @@ def loop(queue):
         print "Please chose a valid option  "
         loop(queue)
 
-main()
+if __name__ == '__main__':
+    main()
