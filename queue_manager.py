@@ -96,7 +96,8 @@ def loop(queue):
         queue.finish_task()
         loop(queue)
     elif choice == "S":
-        print "Seconds since queue start : " + str(time.time() - queue.startTime)
+        print "Seconds since queue start : " + str(time.time() -\
+                                                   queue.startTime)
         print "Average Task Time : " + str(queue.average_task_time)
         print "Average Task Time to Estimate : " + str(queue.time_to_estimate)
         print "Tasks Completed: " + str(queue.tasks_done)
